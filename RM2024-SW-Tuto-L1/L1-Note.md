@@ -11,7 +11,7 @@
 
 <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.2/+esm';
-    mermaid.initialize({ startOnLoad: false , darkMode: true});
+    mermaid.initialize({ startOnLoad: false });
     await mermaid.run({
         querySelector: '.language-mermaid',
     });
