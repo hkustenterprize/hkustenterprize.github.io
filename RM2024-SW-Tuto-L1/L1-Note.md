@@ -1,21 +1,3 @@
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    type="text/javascript"></script>
-<script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-</script>
-
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.2/+esm';
-    mermaid.initialize({ startOnLoad: false });
-    await mermaid.run({
-        querySelector: '.language-mermaid',
-    });
-</script>
 
 # Lecture 1: Introduction to C and C++
 
