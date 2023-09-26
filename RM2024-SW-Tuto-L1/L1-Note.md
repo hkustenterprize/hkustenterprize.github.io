@@ -13,7 +13,7 @@ _Note: you need to go through the section with the flag "Mandatory", for they ar
 
 ### [Introduction to Our Tool Chain (Mandatory)](#introduction-to-our-tool-chain)
 
-### [Say 'Hello world' to the Embedded System(Mandatory)](#say-hello-world-to-the-embedded-system)
+### [Say &#39;Hello world&#39; to the Embedded System(Mandatory)](#say-hello-world-to-the-embedded-system)
 
 ### [Data Types](#data-types-1)
 
@@ -23,7 +23,7 @@ From my own perspective (but may not be totally correct), programming itself is 
 
 **It is just a method, not the ultimate goal.**
 
-Our poetic soul might eulogize for the tragedy and chant for the fortune that unexpectedly bumped into our life. These are not preferred by our reasoning mind. For this part rooted deeply in our personality, we are deliberately eager to <u>recognize</u>, <u>understand</u>, <u>calculate</u>, and ultimately propose a **workable solution**.
+Our poetic soul might eulogize for the tragedy and chant for the fortune that unexpectedly bumped into our life. These are not preferred by our reasoning mind. For this part rooted deeply in our personality, we are deliberately eager to `<u>`recognize`</u>`, `<u>`understand`</u>`, `<u>`calculate`</u>`, and ultimately propose a **workable solution**.
 It would be better to illustrate it as an example.
 Suppose you have successfully passed through our recruitment and become an official software member. Before you could take any relaxation, your embedded PIC abruptly assigned you the task of writing the codes for the team's **'Standard Infantry Robot'** with **other team members** in Season 2024.
 ![Alt text](icons/Infantry.JPG)
@@ -35,7 +35,7 @@ Your course and assignment might point you out the problem you need to solve, bu
 So your first question might be "What is the Infantry Robot". After hours of googling, you might be able to find the relevant descriptions from the official documents of RoboMaster.
 
 > The RoboMaster 2023 University Championship (“RMUC 2023”) will take place mainly in a **shooting** battle format between robots. Participating teams are required to design, develop, and create multiple robots in compliance with specifications to form a robotic team. During a seven-minute round, each of **both teams strives to destroy the other’s base through tactical combat to win the match.**
-_——RoboMaster 2023 University Championship Rules Manual V2.0 (20230713), 1.1.1_
+> _——RoboMaster 2023 University Championship Rules Manual V2.0 (20230713), 1.1.1_
 
 > Standard Robots can launch **17mm projectiles**.
 > _——RoboMaster 2023 University Championship Rules Manual V2.0 (20230713), 3.2_
@@ -126,43 +126,34 @@ Before we investigate different languages, it would be better for us to understa
 
 You can simply regard a bit as the following set:
 
-$$
-bit \in \{0, 1\}
-$$
+$ bit \in \{0, 1\} $
 
 - A bit only contains two states: 0 and 1
 - A simple bit could not be 0 and 1 at the same time
 - 0 and 1 could be otherwise logically interpreted as "True" and "False"
-  
 
 A bit is the minimum unit for effectively describing a state.
 There are
-$$
-2^1 = 2
-$$
+$ 2^1 = 2 $
  states that it could express.
 
 #### A composition, or a sequence of bits, could describe more states
 
 Considering you have 2 bits:
-$$
-bit_1 \in\{0, 1\}, bit_2 \in \{0, 1\}\
-$$
+$ bit_1 \in\{0, 1\}, bit_2 \in \{0, 1\}\ $
 
 All the possible results could be expressed as:
-$$
-(bit_1, bit_2)\in \{(0, 0), (1, 0), (0, 1), (1, 1)\}
-$$
+$ (bit_1, bit_2)\in \{(0, 0), (1, 0), (0, 1), (1, 1)\} $
 
 By simple counting, there are states that 2 bits could express.
 Let's consider the case of  bits:
-$$ bit_1 \in\{0, 1\}, bit_2 \in \{0, 1\}, ... , bit_n \in\{0, 1\} $$
+$ bit_1 \in\{0, 1\}, bit_2 \in \{0, 1\}, ... , bit_n \in\{0, 1\} $
 For every individual bit, we could choose either 0 or 1 at any given time.
 Therefore, there are $2^n$ states that n bits could express.
 
 #### By aligning a sequence of bits, the integer number could be interpreted
 
-$$ N = bit_1 \times 2^0 + bit_2\times 2^1 + bit_3 \times 2^2 + ... + bit_n\times2^{n-1} $$
+$ N = bit_1 \times 2^0 + bit_2\times 2^1 + bit_3 \times 2^2 + ... + bit_n\times2^{n-1} $
 
 Any finite integer could be expressed in a form like this, which is exactly the **binary form**.
 Generally, each storage atomic unit in the computer uses a **high** electrical level to represent "1" and a **low** electrical level to represent "0". By aligning these units, the integers or even more complex data types are able to be demonstrated.
@@ -170,24 +161,20 @@ Generally, each storage atomic unit in the computer uses a **high** electrical l
 An interesting side note is that, the choice for a binary system is not arbitrary. In
 information theory, the _entropy_ of a random variable is defined as the following:
 
-$$
-H = -\sum_{i=1}^{n}p_i\log p_i
-$$
+$ H = -\sum_{i=1}^{n}p_i\log p_i $
 
 The entropy quantify the Shannon information. The higher the entropy, the more **information**
-the random variable contains. The choice of the base in $\log$ defines the unit of the
+the random variable contains. The choice of the base in $ \log $ defines the unit of the
 entropy. If we choose the base to be 2, then the unit of the entropy is called _bit_ or _shannon_.
-If we choose the base to be $e$, then the unit of the entropy is called _nat_, or natural unit.
+If we choose the base to be $ e $, then the unit of the entropy is called _nat_, or natural unit.
 Finally, if we choose the base to be 10, then the unit of the entropy is called _dit_.
 
 #### The Nature of the Computer
 
 The nature of a computer is about **data** and **calculation**.
 
-- **Memory** is the physical device in the computer that stores a sequence of "1" or "0" bits, which is the data, as mentioned above. <u>It's very natural to assign a unique integer "address" for each storage unit_(usually a byte, 8 bits )_ for the convenience of our accessing them.</u>
-
+- **Memory** is the physical device in the computer that stores a sequence of "1" or "0" bits, which is the data, as mentioned above. `<u>`It's very natural to assign a unique integer "address" for each storage unit_(usually a byte, 8 bits )_ for the convenience of our accessing them.`</u>`
 - Doing the calculation, like addition, multiplication, or subtraction, at the hardware level is very complicated. Therefore, the great engineers in history have integrated these circuit parts in a small device called a **Central Processing Unit(CPU)**
-  
 
 You could roughly (but not completely correctly) simplify the computer's workflow as follows:
 
@@ -212,8 +199,6 @@ S2 --> |...| Sn[mem 3 & reg 3]
 Sn --> |instruction n+1| ...
 ```
 
-
-
 #### Machine-Code —— The Computer's Native Language
 
 The computer engineer abstracts a particular calculation, or operation, of the CPU, into a series of instructions. These instructions are mapped to particular codes, and you are able to look them up in the user manual. For the computer users at that time, whenever they want to do specific calculations, they need to look up the corresponding code and input them into the computer. Note that we could also assign these codes to a specific number value and store them in our computer just like the data. This is how the **_machine code_** evolved, which is the "native" language for the computer.
@@ -232,7 +217,7 @@ To solve the second problem, the engineers tried to use some letters or words to
 ```s
 main:
  pushq %rbp               # The address of where the calculation process happens
- movq %rsp, %rbp         
+ movq %rsp, %rbp       
  subq $48, %rsp          # Allocate particular space for the calculation process. The process is happening on the address "rsp - 48"
  call __main
  movl $1, -4(%rbp)       # assign value 1 to the storage unit with the address "rbq - 4" 
@@ -241,10 +226,10 @@ main:
  addl $1, %eax           # Add 1 to "eax"
  movl %eax, -8(%rbp)     # Get the value in "eax" and copy it on the address "rbq - 8"
  movl $0, %eax           # Set 0 to the address "eax"
- addq $48, %rsp          
+ addq $48, %rsp        
  popq %rbp               # Resume and wait for the next calculation process of other program
  ret
-    
+  
 # So annoying if you need to type in these commands just to add two simple numbers!
 ```
 
@@ -263,8 +248,8 @@ Similar to the "first leap", our "second leap" is successfully saving us from th
 */
 int main()
 {
-    int a;          
-    int b = 1;      
+    int a;        
+    int b = 1;    
     a = 2 * b + 1;  
     return 0;
 }
@@ -290,8 +275,6 @@ S2 --> |...| Sn[stack & heap]
 Sn --> |statement n+1| ...
 ```
 
-
-
 One can easily see that higher level state machine can be defined more universally. Depends on
 different architecture, the lower level state machine can be different.
 
@@ -299,7 +282,7 @@ Now we can more clearly define the process of compilation:
 
 > Compilation is a mapping from the higher level state machine to the lower level state machine.
 
-$$ \text{Compiling}: \{C,C^\text{++},...\} \mapsto \{\text{MachineCodes}\}$$
+$ \text{Compiling}: \{C,C^\text{++},...\} \mapsto \{\text{MachineCodes}\} $
 
 With the following requirements:
 
@@ -350,7 +333,7 @@ arm-none-eabi-objcopy -O ihex build/xx_project.elf build/xx_project.hex
 arm-none-eabi-objcopy -O binary -S build/xx_project.elf build/xx_project.bin
 ```
 
-```"xx_project.elf", "xx_project.hex", "xx_project.bin"``` are the files that could be executed by MCU.
+``"xx_project.elf", "xx_project.hex", "xx_project.bin"`` are the files that could be executed by MCU.
 You are able to configure the compilation in the _Makefile_ under the generated project directory. However, **we do not recommend you to do so** as it's another complex topic.
 
 #### Step 4: Download and Debug the Program with Ozone
@@ -359,23 +342,18 @@ You are able to configure the compilation in the _Makefile_ under the generated 
 
 - Flash the code into the MCU
 - Debug
-  
 
 The Details are as follows:
 
 1. Open the Ozone ![Alt text](icons/image.png)
-
 2. Select "File" on the up-left corner, and click "New"-"New Project Wizards"
    ![Alt text](icons/step2.png)
-
 3. Configurate "Device", select "STM32F103C8", and then click "Next"
    ![Alt text](icons/step3.png)
-
 4. Select "Target Interface" as the option "SWD"
    ![Alt text](icons/image-1.png)
-
 5. Select the ".elf" file of your project. Compared to the example below.
-**Please select ".elf" instead of others under the "/build" directory  if you want to debug**
+   **Please select ".elf" instead of others under the "/build" directory  if you want to debug**
 
 ```shell
 the_upper_stream_path_of_your_project/xx_project/build/xx_project.elf
@@ -388,9 +366,9 @@ the_upper_stream_path_of_your_project/xx_project/build/xx_project.elf
 7. Click "Finish"
 8. Connect your computer with the J-Link through the USB Interface. Connect the J-Link with the MCU.
    - _Jlink is our "debugger", or **debug probe** otherwise. It is the media between our computer and the MCU. **SWD / Serial Wire Debug** is the debugging protocol we use, which means, how our working computers "communicate" with MCU_
-   ![Alt text](icons/debug1-1.jpg)
+     ![Alt text](icons/debug1-1.jpg)
    - _Connect the MCU to your computer through the MCU_
-   ![Alt text](icons/debug2.jpg)
+     ![Alt text](icons/debug2.jpg)
 9. Click the green button on the up-left corner of the Ozone interface.
    ![Alt text](icons/image-4.png)
 10. Continue until you see three green progress bars. Wait until the flashing process stops.
@@ -418,7 +396,7 @@ YOu might find the codes under the **main function**. It looks like this.
 int main(void)
 {
     /* MCU Configuration--------------------------------------------------------*/
-    
+  
     /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
     HAL_Init();
 
@@ -443,16 +421,16 @@ int main(void)
     /*============= Your code begins here ============== */
   
     blink(0, 255, 0, 0); // We blink the red LED in the first in red!
-    
+  
     /*============= Your code ends here =============== */
     while (1);
     /* USER CODE END 3 */
 }
 ```
 
-This is where our journey begin. It is the fact that ```main()``` is every program's **entry point**, that is, where every program starts.
+This is where our journey begin. It is the fact that ``main()`` is every program's **entry point**, that is, where every program starts.
 
-You might now get very confused about those strange lines of names with strange bracket, like ```HAL_Init()```, ```SystemClock_Config()```. Don't worry, we don't need to know too much about them at this stage. Ignoring those "useless" parts, all you need to consider is the following.
+You might now get very confused about those strange lines of names with strange bracket, like ``HAL_Init()``, ``SystemClock_Config()``. Don't worry, we don't need to know too much about them at this stage. Ignoring those "useless" parts, all you need to consider is the following.
 
 ```c
 /**
@@ -468,31 +446,23 @@ int main(void)
     /*============= Your code begins here ============== */
   
     blink(0, 255, 0, 0); // We blink the red LED in the first in red!
-    
+  
     /*============= Your code ends here =============== */
     while (1);
     /* USER CODE END 3 */
 }
 ```
 
-This code blinks the <font color = Red> red </font> LED at the index 1.
+This code blinks the `<font color = Red>` red `</font>` LED at the index 1.
 
 #### RGB
 
 RGB _(red, green, and blue)_ refers to a system representing the colors used on a digital display screen. You can simply regard _our_ rgb value as the form of the following vector:
 
-$$
-\left(
-\begin{matrix}
-r \\
-g  \\  
-b  
-\end{matrix}
-\right)\in\N^3\,\,\,\,\,\,\,\,\, r\in [0, 255],\, g\in [0, 255],\, b\in[0, 255];
-$$
+$ \left( \begin{matrix} r \\ g \\ b \end{matrix} \right)\in\N^3\,\,\,\,\,\,\,\,\, r\in [0, 255],\, g\in [0, 255],\, b\in[0, 255]; $
 The principle of the color mixture tells us we are able to use a linear combination of three basic colors (red, blue, and green) to represent different colors. This is why we could control these three values, that is, the **density** of each basic color, to control our desired color and the mixture of the basic colors.
 **Some Interesting Combination of RGB Values:**
-<font color = RED >(255, 0, 0)</font> <font color = ORANGE >(255, 128, 0)</font>  <font color =  YELLOW>(255, 255, 0) </font> <font color = GREEN>(0, 255, 0) </font> <font color = CYAN>(0, 255, 255) </font> <font color = BLUE> (0, 0, 255) </font> <font color = PURPLE> (255, 0, 255)</font>
+`<font color = RED >`(255, 0, 0)`</font>` `<font color = ORANGE >`(255, 128, 0)`</font>`  `<font color =  YELLOW>`(255, 255, 0) `</font>` `<font color = GREEN>`(0, 255, 0) `</font>` `<font color = CYAN>`(0, 255, 255) `</font>` `<font color = BLUE>` (0, 0, 255) `</font>` `<font color = PURPLE>` (255, 0, 255)`</font>`
 
 ```c
 /**
@@ -527,7 +497,7 @@ int main(void)
 }
 ```
 
-Don't forget to ```make -j``` in the terminal, download the program to MCU, and play with the LED.
+Don't forget to ``make -j`` in the terminal, download the program to MCU, and play with the LED.
 
 ### Data types
 
@@ -577,10 +547,10 @@ ways we choose to face the world. The way we choose to represent data is called 
 <img src="icon/data-types.png" width="900">
 
 - A signed integer is one that can represent a negative number; an unsigned integer will
-never be interpreted as negative, so it can represent a wider range of positive numbers.
-Most compilers assume signed if unspecified.
+  never be interpreted as negative, so it can represent a wider range of positive numbers.
+  Most compilers assume signed if unspecified.
 - There are actually 3 integer types: **short, int, and long**, in non-decreasing order of
-size. The same goes for the 3 floating point types, **float, double, and long double**.
+  size. The same goes for the 3 floating point types, **float, double, and long double**.
 - The sizes/ranges for each type are not fully standardized.
 
 <img src="https://4.bp.blogspot.com/-v40EEGDWRSw/T-GIfoAeJLI/AAAAAAAAAZE/Yf_f-eYwT0k/s320/Long.png" width="900">
@@ -613,18 +583,18 @@ Don't be scared by the picture. You don't need to understand the details of the 
 Operators are symbols that tell the compiler to perform specific mathematical or logical
 manipulations. We will just list some of the most common ones here. It provides us the _"tool"_ to manipulate our _"guest"_ lives in the _"house"_.
 
-| Operator | Description    | Example |
-| -------- | -------------- | ------- |
-| `+`      | Addition       | `a + b` |
-| `-`      | Subtraction    | `a - b` |
-| `*`      | Multiplication | `a * b` |
-| `/`      | Division       | `a / b` |
-| `%`      | Modulus        | `a % b` |
-| `=`      | Assignment     | `a = b` |
+| Operator | Description    | Example   |
+| -------- | -------------- | --------- |
+| `+`    | Addition       | `a + b` |
+| `-`    | Subtraction    | `a - b` |
+| `*`    | Multiplication | `a * b` |
+| `/`    | Division       | `a / b` |
+| `%`    | Modulus        | `a % b` |
+| `=`    | Assignment     | `a = b` |
 
 **Note:**
 
-- `=` doesn't mean mathematical equivalence $“ \equiv ”$
+- `=` doesn't mean mathematical equivalence " $ \equiv $ "
 - `a = b` means you assign the value in the variable b to the variable a, which means, you first exile the _"guestB"_ lives in _"house b"_, then let the _"guestA_" lives in _"house a"_ copy himself, and finally invite his _"copy"_ into the empty _"house b"_.
 
 ```c
@@ -671,11 +641,11 @@ int main()
 
 | Operator | Description | Example    |
 | -------- | ----------- | ---------- |
-| `&&`     | Logical AND | `a && b`   |
+| `&&`   | Logical AND | `a && b` |
 | `\|\|`   | Logical OR  | `a \|\| b` |
-| `!`      | Logical NOT | `!a`       |
+| `!`    | Logical NOT | `!a`     |
 
-- In C/C++, we use the bit "1" to represent a state as "true" and use the bit "0” to represent a state as "false".
+- In C/C++, we use the bit "1" to represent a state as "true" and use the bit "0" to represent a state as "false".
 
 ```c
 /**
@@ -701,15 +671,15 @@ int main()
 } 
 ```
 
-| Operator | Description           | Example  |
-| -------- | --------------------- | -------- |
-| `==`     | Equal                 | `a == b` |
-| `!=`     | Not equal             | `a != b` |
-| `>`      | Greater than          | `a > b`  |
-| `<`      | Less than             | `a < b`  |
-| `>=`     | Greater than or equal | `a >= b` |
-| `<=`     | Less than or equal    | `a <= b` |
+| Operator | Description           | Example    |
+| -------- | --------------------- | ---------- |
+| `==`   | Equal                 | `a == b` |
+| `!=`   | Not equal             | `a != b` |
+| `>`    | Greater than          | `a > b`  |
+| `<`    | Less than             | `a < b`  |
+| `>=`   | Greater than or equal | `a >= b` |
+| `<=`   | Less than or equal    | `a <= b` |
 
 For these types of operators, you can regard it as a function with two variables or data input, outputting a logistic result "0" or "1".
 
-- **Don't mistake the equality operator `==` with the assignment operator `=`. In this case, the equal operator `==` behaves more like mathematic equivalence** $" \equiv "$.
+- **Don't mistake the equality operator `==` with the assignment operator `=`. In this case, the equal operator `==` behaves more like mathematic equivalence** " $ \equiv $ ".
