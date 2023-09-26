@@ -126,7 +126,7 @@ Before we investigate different languages, it would be better for us to understa
 
 You can simply regard a bit as the following set:
 
-$ bit \in \{0, 1\} $
+ $bit \in \{0, 1\}$ 
 
 - A bit only contains two states: 0 and 1
 - A simple bit could not be 0 and 1 at the same time
@@ -134,26 +134,26 @@ $ bit \in \{0, 1\} $
 
 A bit is the minimum unit for effectively describing a state.
 There are
-$ 2^1 = 2 $
+ $2^1 = 2$ 
  states that it could express.
 
 #### A composition, or a sequence of bits, could describe more states
 
 Considering you have 2 bits:
-$ bit_1 \in\{0, 1\}, bit_2 \in \{0, 1\}\ $
+ $bit_1 \in\{0, 1\}, bit_2 \in \{0, 1\}\$ 
 
 All the possible results could be expressed as:
-$ (bit_1, bit_2)\in \{(0, 0), (1, 0), (0, 1), (1, 1)\} $
+ $(bit_1, bit_2)\in \{(0, 0), (1, 0), (0, 1), (1, 1)\}$ 
 
 By simple counting, there are states that 2 bits could express.
 Let's consider the case of  bits:
-$ bit_1 \in\{0, 1\}, bit_2 \in \{0, 1\}, ... , bit_n \in\{0, 1\} $
+ $bit_1 \in\{0, 1\}, bit_2 \in \{0, 1\}, ... , bit_n \in\{0, 1\}$ 
 For every individual bit, we could choose either 0 or 1 at any given time.
 Therefore, there are $2^n$ states that n bits could express.
 
 #### By aligning a sequence of bits, the integer number could be interpreted
 
-$ N = bit_1 \times 2^0 + bit_2\times 2^1 + bit_3 \times 2^2 + ... + bit_n\times2^{n-1} $
+ $N = bit_1 \times 2^0 + bit_2\times 2^1 + bit_3 \times 2^2 + ... + bit_n\times2^{n-1}$ 
 
 Any finite integer could be expressed in a form like this, which is exactly the **binary form**.
 Generally, each storage atomic unit in the computer uses a **high** electrical level to represent "1" and a **low** electrical level to represent "0". By aligning these units, the integers or even more complex data types are able to be demonstrated.
@@ -161,12 +161,12 @@ Generally, each storage atomic unit in the computer uses a **high** electrical l
 An interesting side note is that, the choice for a binary system is not arbitrary. In
 information theory, the _entropy_ of a random variable is defined as the following:
 
-$ H = -\sum_{i=1}^{n}p_i\log p_i $
+ $H = -\sum_{i=1}^{n}p_i\log p_i$ 
 
 The entropy quantify the Shannon information. The higher the entropy, the more **information**
-the random variable contains. The choice of the base in $ \log $ defines the unit of the
+the random variable contains. The choice of the base in $\log$ defines the unit of the
 entropy. If we choose the base to be 2, then the unit of the entropy is called _bit_ or _shannon_.
-If we choose the base to be $ e $, then the unit of the entropy is called _nat_, or natural unit.
+If we choose the base to be $e$, then the unit of the entropy is called _nat_, or natural unit.
 Finally, if we choose the base to be 10, then the unit of the entropy is called _dit_.
 
 #### The Nature of the Computer
@@ -282,7 +282,7 @@ Now we can more clearly define the process of compilation:
 
 > Compilation is a mapping from the higher level state machine to the lower level state machine.
 
-$ \text{Compiling}: \{C,C^\text{++},...\} \mapsto \{\text{MachineCodes}\} $
+ $\text{Compiling}: \{C,C^\text{++},...\} \mapsto \{\text{MachineCodes}\}$
 
 With the following requirements:
 
@@ -459,7 +459,7 @@ This code blinks the `<font color = Red>` red `</font>` LED at the index 1.
 
 RGB _(red, green, and blue)_ refers to a system representing the colors used on a digital display screen. You can simply regard _our_ rgb value as the form of the following vector:
 
-$ \left( \begin{matrix} r \\ g \\ b \end{matrix} \right)\in\N^3\,\,\,\,\,\,\,\,\, r\in [0, 255],\, g\in [0, 255],\, b\in[0, 255]; $
+$\left( \begin{matrix} r \\ g \\ b \end{matrix} \right)\in\N^3\,\,\,\,\,\,\,\,\, r\in [0, 255],\, g\in [0, 255],\, b\in[0, 255];$
 The principle of the color mixture tells us we are able to use a linear combination of three basic colors (red, blue, and green) to represent different colors. This is why we could control these three values, that is, the **density** of each basic color, to control our desired color and the mixture of the basic colors.
 **Some Interesting Combination of RGB Values:**
 `<font color = RED >`(255, 0, 0)`</font>` `<font color = ORANGE >`(255, 128, 0)`</font>`  `<font color =  YELLOW>`(255, 255, 0) `</font>` `<font color = GREEN>`(0, 255, 0) `</font>` `<font color = CYAN>`(0, 255, 255) `</font>` `<font color = BLUE>` (0, 0, 255) `</font>` `<font color = PURPLE>` (255, 0, 255)`</font>`
@@ -594,7 +594,7 @@ manipulations. We will just list some of the most common ones here. It provides 
 
 **Note:**
 
-- `=` doesn't mean mathematical equivalence " $ \equiv $ "
+- `=` doesn't mean mathematical equivalence " $\equiv$ "
 - `a = b` means you assign the value in the variable b to the variable a, which means, you first exile the _"guestB"_ lives in _"house b"_, then let the _"guestA_" lives in _"house a"_ copy himself, and finally invite his _"copy"_ into the empty _"house b"_.
 
 ```c
@@ -682,4 +682,4 @@ int main()
 
 For these types of operators, you can regard it as a function with two variables or data input, outputting a logistic result "0" or "1".
 
-- **Don't mistake the equality operator `==` with the assignment operator `=`. In this case, the equal operator `==` behaves more like mathematic equivalence** " $ \equiv $ ".
+- **Don't mistake the equality operator `==` with the assignment operator `=`. In this case, the equal operator `==` behaves more like mathematic equivalence** " $\equiv$ ".
