@@ -496,7 +496,7 @@ r \\
 g  \\  
 b  
 \end{matrix}
-\right)\in\N^3\,\,\,\,\,\,\,\,\, r\in [0, 255],\, g\in [0, 255],\, b\in[0, 255];$ 
+\right)\in\mathbb{N}^3\,\,\,\,\,\,\,\,\, r\in [0, 255],\, g\in [0, 255],\, b\in[0, 255];$ 
 The principle of the color mixture tells us we are able to use a linear combination of three basic colors (red, blue, and green) to represent different colors. This is why we could control these three values, that is, the **density** of each basic color, to control our desired color and the mixture of the basic colors.
 **Some Interesting Combination of RGB Values:**
 <font color = RED >(255, 0, 0)</font> <font color = ORANGE >(255, 128, 0)</font>  <font color =  YELLOW>(255, 255, 0) </font> <font color = GREEN>(0, 255, 0) </font> <font color = CYAN>(0, 255, 255) </font> <font color = BLUE> (0, 0, 255) </font> <font color = PURPLE> (255, 0, 255)</font>
