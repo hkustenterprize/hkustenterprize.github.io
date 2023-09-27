@@ -490,10 +490,10 @@ This code blinks the <font color = Red> red </font> LED at the index 1.
 
 RGB _(red, green, and blue)_ refers to a system representing the colors used on a digital display screen. You can simply regard _our_ rgb value as the form of the following vector:
 
- $\left(
+$\left(
 \begin{matrix}
 r \\
-g  \\  
+g \\  
 b  
 \end{matrix}
 \right)\in\mathbb{N}^3\,\,\,\,\,\,\,\,\, r\in [0, 255],\, g\in [0, 255],\, b\in[0, 255];$ 
@@ -554,7 +554,7 @@ Recall from the above ——
 
 The decimal represented under the form like this is **float**. The computer memory is **finite**, but the data such as real numbers is **infinite**. One of the most important topics in Computer Science is to use the finite data structure to approximate the infinite value.
 
-As the chinese philosopher Zhuangzi said:
+As the Chinese philosopher Zhuangzi said:
 
 > 以有涯隨無涯，殆已！
 >
@@ -581,7 +581,7 @@ In the cold and cruel world of only 1s and 0s, the only light of human civilizat
 ways we choose to face the world. The way we choose to represent data is called a
 **data type**. The most common data types are:
 
-<img src="icon/data-types.png" width="900">
+<img src="icons/data-types.png" width="900">
 
 - A signed integer is one that can represent a negative number; an unsigned integer will
 never be interpreted as negative, so it can represent a wider range of positive numbers.
